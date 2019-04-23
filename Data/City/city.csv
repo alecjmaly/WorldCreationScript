@@ -1,0 +1,8 @@
+Size,Small,Medium,Large,,
+Racial Type (avg age),Goblins(2->20),Elf(75->150),Orc(30->80),Demon(500->1000),Fairy
+Wealth,500,1000,1500,2000,2500
+isAtWar(<13 = Yes; =56 = ),(0->101),,,,
+Population,(x->y),,,,
+Roundabouts,(3->10),,,,
+Dirt Streets,(6->10),,,,
+Run,world\building.csv,world\building.csv,,,

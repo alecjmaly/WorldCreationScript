@@ -1,0 +1,6 @@
+Level,(3->7),,,,
+Type,Mage,Warlock,Paladin,Rogue,Warrior
+Weakness,Earth,Wind,Fire,Water,
+Health,(6->11),,,,
+Skill(magic OR strength) ,(5->15),,,,
+Run,Pet\pet.csv,Person\face.csv,,,

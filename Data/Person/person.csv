@@ -1,0 +1,8 @@
+Height_Units,m,in,cm,
+Height,(30->60),,,
+Weight,lbs(3->9),oz(5->12),g(80->90),
+Skin_Color,Black,Brown,White,
+Weakness,Earth,Wind,Fire,Water
+Strength,14,17,30,
+Health,23,,,
+Run,person\face.csv,Pet\pet.csv,person\sidekick.csv,
