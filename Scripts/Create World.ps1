@@ -1,3 +1,17 @@
+function needsUpdate() {
+    $this_version = (Get-Content -Path "./config.json" | ConvertFrom-Json).Version
+
+    $resp = Invoke-RestMethod -Method Get -Uri "https://raw.githubusercontent.com/alecjmaly/WorldCreationScript/master/config.json" 
+    $current_version = $resp.Version
+
+    If ($this_version -lt $current_version) {
+        Write-Host "`nNOTE: There is an update available. Please run the Run_Install_Update.bat if you would like to update." -ForegroundColor Yellow
+        Write-Host "NOTE: Current version source code can be found here: https://github.com/alecjmaly/WorldCreationScript`n" -ForegroundColor Yellow
+    }
+}
+
+
+
 function generate() {
     Param( [string]$input_file,
            [string]$root
@@ -129,7 +143,7 @@ function getRand() {
             }
         } 
 
-        $rand_value = Get-Random -Minimum $x -Maximum $y+1  # max+1 = inclusive
+        $rand_value = Get-Random -Minimum $x -Maximum ($y+1)  # max+1 = inclusive
         return $rand_value
 }
 
@@ -204,10 +218,17 @@ function pause() {
 
 
 
+###### BODY ##########
 
+try {
 
-$output = generate -input_file ".\master.csv" -root ([environment]::CurrentDirectory)
-cls
-output -arr $output -num_tabs 0
-pause
+    $output = generate -input_file ".\master.csv" -root ([environment]::CurrentDirectory)
+    cls
+    output -arr $output -num_tabs 0
+    needsUpdate
+    pause
 
+} catch {
+    Write-Error $_
+    pause
+}
