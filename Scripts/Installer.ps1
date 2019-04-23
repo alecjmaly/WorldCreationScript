@@ -16,7 +16,7 @@ Expand-Archive .\file.zip -DestinationPath .
 
 # Extract and overwrite all files (Only pull Data Directory if it doesn't already exist)
 Get-ChildItem -Path .\WorldCreationScript-master | ForEach-Object { 
-        $_.MoveTo(".\$($_.Name)")
+        Move-Item -Path $_.FullName -Destination ".\$($_.Name)" -Force 
 }
 
 # cleanup 
