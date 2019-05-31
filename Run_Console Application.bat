@@ -1,1 +1,1 @@
-Powershell.exe -executionpolicy remotesigned -File  ".\Scripts\Console Application.ps1"
+Powershell.exe -executionpolicy bypass -File  ".\Scripts\Console Application.ps1"
