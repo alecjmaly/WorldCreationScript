@@ -1,1 +1,1 @@
-Powershell.exe -executionpolicy remotesigned -File  ".\Scripts\Installer.ps1"
+Powershell.exe -executionpolicy bypass -File  ".\Scripts\Installer.ps1"
