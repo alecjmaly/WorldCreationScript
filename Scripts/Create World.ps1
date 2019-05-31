@@ -1,3 +1,6 @@
+# sets execution policy to import function script
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
 # import functions
 ."$([environment]::CurrentDirectory)\Scripts\f_CreateWorld.ps1"
 
