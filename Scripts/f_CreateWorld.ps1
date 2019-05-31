@@ -124,12 +124,12 @@ function parseNumber() {
 }
 
 function getRand() {
-    Param( [int]$min,
-           [int]$max
+    Param( $min,
+           $max
          )
 
-        If ($min -notlike "x") { $x = $min }
-        If ($max -notlike "y") { $y = $max }
+        If ($min -notlike "x") { $x = [int]$min }
+        If ($max -notlike "y") { $y = [int]$max }
 
         
         If ($min -like "x") { 
