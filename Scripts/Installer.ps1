@@ -48,3 +48,5 @@ Get-ChildItem -Path .\WorldCreationScript-master | ForEach-Object {
 Remove-Item -Path "$($root)\file.zip"
 Remove-Item -Path "$($root)\WorldCreationScript-master" -Confirm:$false -Recurse -Force
 
+Write-Host "`n`nUpdate Complete."
+pause
