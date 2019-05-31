@@ -124,8 +124,8 @@ function parseNumber() {
 }
 
 function getRand() {
-    Param( $min,
-           $max
+    Param( [int]$min,
+           [int]$max
          )
 
         If ($min -notlike "x") { $x = $min }
